@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Production build output
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment and local states
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Ephemeral bridge security token
+.noust-bridge.token
+

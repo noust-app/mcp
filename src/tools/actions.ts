@@ -40,7 +40,7 @@ import type {
 
 const OFFLINE_MUTATION_MESSAGE =
     'Interactive workspace actions require Noust to be running in your browser with the local WebSocket bridge connected (localhost:8421).\n' +
-    'Please verify that Noust is open, File System Sync is configured for the workspace folder, and the MCP Bridge is enabled in Settings > Behavior > Workspace.';
+    'Please verify that Noust is open, File System Sync is configured for the workspace folder, and the MCP Bridge is enabled in the Agent panel in the Menu Shell.';
 
 async function getOfflineErrorMessage(bridge?: BridgeServer): Promise<string> {
     if (bridge) {

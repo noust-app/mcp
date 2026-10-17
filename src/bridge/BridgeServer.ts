@@ -1153,10 +1153,10 @@ export class BridgeServer {
         return `Noust application is not connected via WebSocket bridge (ws://${this.host}:${this.port}).\n` +
             `• Probable Causes:\n` +
             `  1. Noust is not open in your browser.\n` +
-            `  2. The MCP toggle is disabled in Noust (Settings > Behavior > Workspace > MCP Bridge).\n` +
+            `  2. The MCP toggle is disabled in Noust (Menu Shell > Agent > MCP Bridge).\n` +
             `  3. File System Sync is not active for the workspace folder.\n` +
             `• Action Required:\n` +
-            `  - Open Noust in your browser, ensure MCP is enabled in Settings > Behavior > Workspace, and link File System Sync to your workspace folder. The browser connects automatically in the background.`;
+            `  - Open Noust in your browser, ensure MCP Bridge is enabled in the Agent panel in the Menu Shell, and link File System Sync to your workspace folder. The browser connects automatically in the background.`;
     }
 
     /**

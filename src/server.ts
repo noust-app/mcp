@@ -33,7 +33,7 @@ Real-time connection to the active Noust workspace and visual canvas.
 1. IMMEDIATE ACTION: Call the target mutation tool immediately in your very first turn. Never call 'get_workspace_status' or explore workspace files beforehand; the bridge validates connection status automatically.
 2. DISTINCT FLAG COLORS: When asked to create a flag with a distinct color (e.g. 'a shade of orange different from existing flags'), call 'list_flags()' to inspect currently used colors in the domain and choose a distinct hex code.
 3. STRICT ISOLATION: NEVER edit, overwrite, or touch local ".noust" files using filesystem tools (write_to_file, replace_file_content). Always and exclusively use Noust MCP tools.
-4. BRIDGE OFFLINE / DISCONNECTED: If a mutation tool returns that the bridge is disconnected or rejected, NEVER edit local .noust files directly. Explain the diagnostic to the user (ensure Noust is open with File System Sync linked and MCP Bridge enabled in Settings > Behavior > Workspace).
+4. BRIDGE OFFLINE / DISCONNECTED: If a mutation tool returns that the bridge is disconnected or rejected, NEVER edit local .noust files directly. Explain the diagnostic to the user (ensure Noust is open with File System Sync linked and MCP Bridge enabled in the Agent panel in the Menu Shell).
 5. MULTI-WORKSPACE ROUTING: If multiple workspaces are open across browser tabs and the current working directory does not contain a local .noust file, you must specify the 'workspace' parameter (workspace name or ID). If you are unsure which workspace the user meant and multiple are open without a local .noust file, call 'get_workspace_status()' or ask the user which workspace they want to modify.`;
 
 /**

@@ -1,8 +1,8 @@
-# noust-mcp
+# @noust-app/mcp
 
 > Official Model Context Protocol (MCP) server for [Noust](https://noust.app) workspaces.
 
-`noust-mcp` connects AI assistants—including **Claude Desktop**, **Cursor**, **Antigravity**, **Windsurf**, and **VS Code**—directly to your local Noust notes, canvas, Nexus documents, objectives, and media assets.
+`@noust-app/mcp` connects AI assistants—including **Claude Desktop**, **Cursor**, **Antigravity**, **Windsurf**, and **VS Code**—directly to your local Noust notes, canvas, Nexus documents, objectives, and media assets.
 
 ---
 
@@ -28,7 +28,7 @@
 
 > [!WARNING]
 > **Cloud AI Models & Data Privacy Notice**
-> While Noust and `noust-mcp` operate 100% locally on your machine (`127.0.0.1`) and never transmit your notes or data to Noust servers, any information read or retrieved by MCP tools (`search_workspace`, `get_note`, `get_document`, `get_objective`, etc.) becomes prompt context for your connected AI assistant.
+> While Noust and `@noust-app/mcp` operate 100% locally on your machine (`127.0.0.1`) and never transmit your notes or data to Noust servers, any information read or retrieved by MCP tools (`search_workspace`, `get_note`, `get_document`, `get_objective`, etc.) becomes prompt context for your connected AI assistant.
 >
 > If your assistant connects to third-party cloud models (such as Claude/Anthropic, ChatGPT/OpenAI, or Gemini/Google), the retrieved workspace contents are sent over the internet to that model provider's servers according to their respective privacy policies and retention terms.
 >
@@ -47,7 +47,7 @@
 
 ## Installation & Configuration
 
-You do **not** need to install `noust-mcp` globally. MCP clients execute it on demand via `npx`.
+You do **not** need to install `@noust-app/mcp` globally. MCP clients execute it on demand via `npx`.
 
 ### 1. Claude Desktop
 
@@ -64,7 +64,7 @@ Add `noust` to your Claude Desktop configuration file:
       "command": "npx",
       "args": [
         "-y",
-        "noust-mcp",
+        "@noust-app/mcp",
         "--workspace",
         "/absolute/path/to/your/noust-workspace-folder"
       ]
@@ -91,7 +91,7 @@ Add `noust` to your project's `.cursor/mcp.json` or globally in **Settings > Fea
       "command": "npx",
       "args": [
         "-y",
-        "noust-mcp",
+        "@noust-app/mcp",
         "--workspace",
         "/absolute/path/to/your/noust-workspace-folder"
       ]
@@ -113,7 +113,7 @@ Add `noust` to your `mcp_config.json`:
       "command": "npx",
       "args": [
         "-y",
-        "noust-mcp",
+        "@noust-app/mcp",
         "--workspace",
         "/absolute/path/to/your/noust-workspace-folder"
       ]
@@ -127,7 +127,7 @@ Add `noust` to your `mcp_config.json`:
 ## Command Line Options
 
 ```bash
-npx noust-mcp --workspace <path-to-folder> [options]
+npx @noust-app/mcp --workspace <path-to-folder> [options]
 ```
 
 | Option | Shorthand | Description | Default |
@@ -141,10 +141,10 @@ npx noust-mcp --workspace <path-to-folder> [options]
 
 ```bash
 # Add a local dev origin while keeping official noust.app and localhost
-npx noust-mcp -w ~/Documents/NoustExports --allowed-origins http://localhost:5173 -d
+npx @noust-app/mcp -w ~/Documents/NoustExports --allowed-origins http://localhost:5173 -d
 
 # Replace default whitelist entirely with a private self-hosted domain
-npx noust-mcp -w ~/Documents/NoustExports --allowed-origins https://notes.internal.corp -r
+npx @noust-app/mcp -w ~/Documents/NoustExports --allowed-origins https://notes.internal.corp -r
 ```
 
 ---

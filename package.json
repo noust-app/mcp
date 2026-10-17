@@ -1,9 +1,10 @@
 {
-  "name": "noust-mcp",
+  "name": "@noust-app/mcp",
   "version": "1.0.0",
   "description": "Model Context Protocol (MCP) server for Noust workspaces",
   "type": "module",
   "bin": {
+    "mcp": "./dist/bin/cli.js",
     "noust-mcp": "./dist/bin/cli.js"
   },
   "main": "./dist/index.js",

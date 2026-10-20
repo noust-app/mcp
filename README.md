@@ -18,6 +18,7 @@
   - Protected against Cross-Site WebSocket Hijacking (CSWSH) and DNS Rebinding.
   - Ephemeral shared-secret token (`.noust-bridge.token`) with restricted file permissions (`0600`) ensures only authorized local workspace tabs can interact with the server.
   - Automatic DOMPurify sanitization on all agent-generated content.
+  - **Encrypted Workspaces**: If the `.noust` workspace file is encrypted with a user password, the MCP server will only operate with Noust open and active in the browser. This ensures that AI agents cannot read the content of `.noust` directly from disk and are strictly required to use the official tools via MCP Server.
 - **Standard Protocol Compliance**:
   - Built with `@modelcontextprotocol/sdk` adhering to the official Model Context Protocol specification.
   - Operates cleanly over standard input/output (`stdio`).
